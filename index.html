@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mohammad Aasif Ikbal Kazi - Resume</title>
   <style>
     :root {
       --primary: #1e2a38;
-      --accent: #ffd369;
+      --accent: #1a73e8; /* Changed accent color for links to blue */
       --bg: #f5f7fa;
       --dark: #333;
     }
@@ -17,37 +17,93 @@
       box-sizing: border-box;
     }
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: var(--bg);
       color: var(--dark);
       line-height: 1.6;
     }
+
     header {
       background: var(--primary);
       color: white;
-      padding: 2rem;
+      position: relative;
+      padding-top: 120px;
+      padding-bottom: 3rem;
       text-align: center;
+      overflow: hidden;
     }
-    header h1 {
-      margin: 0.3rem 0;
+    /* Banner image full width */
+    .banner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      z-index: 1;
     }
-    header a {
+    /* Profile picture circle centered overlapping banner */
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 5px solid white;
+      object-fit: cover;
+      position: relative;
+      z-index: 2;
+      margin: 0 auto;
+      margin-top: -80px; /* half profile pic height to overlap banner */
+      display: block;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    /* Text container */
+    .profile-text {
+      margin-top: 1rem;
+      color: white; /* white text on dark background */
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 1rem;
+    }
+    .profile-text h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.2rem;
+      font-weight: 700;
+    }
+    .profile-text p.title {
+      font-weight: 600;
       color: var(--accent);
-      text-decoration: none;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
     }
+    .profile-text p.contact {
+      font-size: 0.9rem;
+      line-height: 1.3;
+    }
+    .profile-text a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
     .container {
       max-width: 1100px;
-      margin: auto;
-      padding: 2rem;
+      margin: 2rem auto 3rem;
+      padding: 0 1rem;
     }
     section {
       margin-bottom: 2rem;
       animation: fadeInUp 0.8s ease-in-out both;
+      background: white;
+      padding: 1.5rem 2rem;
+      border-radius: 8px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.1);
     }
     h2 {
       margin-bottom: 1rem;
       border-bottom: 2px solid #ddd;
       padding-bottom: 0.5rem;
+      color: var(--primary);
     }
     ul {
       padding-left: 1.5rem;
@@ -57,7 +113,7 @@
       background: var(--primary);
       color: white;
       padding: 0.3rem 0.8rem;
-      margin: 0.2rem;
+      margin: 0.2rem 0.3rem 0.2rem 0;
       border-radius: 20px;
       font-size: 0.9rem;
     }
@@ -69,6 +125,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
+      justify-content: center;
     }
     .skills-icons div {
       text-align: center;
@@ -78,6 +135,12 @@
       width: 48px;
       margin-bottom: 0.3rem;
     }
+
+    /* New CSS for date font size */
+    .experience-date {
+      font-size: 0.9em; /* Adjust as needed */
+    }
+
     @keyframes fadeInUp {
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
@@ -86,24 +149,65 @@
       .skills-icons {
         justify-content: center;
       }
+      header {
+        padding-top: 100px;
+        padding-bottom: 2rem;
+      }
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+        margin-top: -60px;
+        border-width: 4px;
+      }
+      .profile-text h1 {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Mohammad Aasif Ikbal Kazi</h1>
-    <p>Projects Control Manager | 25+ Years in Landscaping & Contracting</p>
-    <p>
-      📍 704, Corniche Tower Block B, Al Bateen, PO Box 45414, Abu Dhabi – U.A.E. <br />
-      📧 <a href="mailto:aasifkazi@yahoo.com">aasifkazi@yahoo.com</a> | 📞 +971501275464 | 
-      <a href="https://linkedin.com/in/aasifkazi" target="_blank">LinkedIn</a>
-    </p>
+    <img
+      src="./src/images/banner.jfif"
+      alt="Banner Image"
+      class="banner"
+      loading="lazy"
+    />
+    <img
+      src="./src/images/profile_picture.jfif"
+      alt="Mohammad Aasif Ikbal Kazi"
+      class="profile-pic"
+      loading="lazy"
+    />
+
+    <div class="profile-text">
+      <h1>Mohammad Aasif Ikbal Kazi</h1>
+      <p class="title">Projects Control Manager | 25+ Years in Landscaping &amp; Contracting</p>
+      <p class="contact">
+        📍 704, Corniche Tower Block B, Al Bateen, PO Box 45414, Abu Dhabi – U.A.E.<br />
+        📧 <a href="mailto:aasifkazi@yahoo.com">aasifkazi@yahoo.com</a> | 📞 +971501275464 | 
+        <a href="https://linkedin.com/in/aasifkazi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </p>
+    </div>
   </header>
 
   <div class="container">
     <section>
       <h2>Professional Summary</h2>
-      <p>Seasoned management professional with over 25 years of leadership experience in the landscaping, construction, and contracting industry. Specializes in project management, P&amp;L management, strategic planning, CAPEX and OPEX management, financial oversight, and operational excellence. Proven record in business growth, large-scale project execution, and workforce leadership (1600+ employees). Skilled in stakeholder coordination, scope and risk management, and cross-functional team collaboration. Strong understanding of Abu Dhabi &amp; Middle East business environment and regulations.</p>
+      <p>Seasoned management professional with over 25 years of leadership experience in the landscaping, 
+        construction, and contracting industry, specializing in project management, P&L management, strategic 
+        planning, financial oversight, CAPEX and OPEX Management, and operational excellence. Proven track 
+        record of driving business growth, and managing large-scale projects and a workforce of over 1600 
+        employees. Proficient in devising comprehensive plans encompassing scope, resource allocation, 
+        scheduling, and financial considerations. Known for fostering collaboration across departments to define 
+        project requirements and consistently deliver exceptional outcomes. Renowned for vigilant project 
+        oversight, including risk mitigation and issue resolution, resulting in seamless execution. Dedicated to 
+        budget management, resource optimization, and nurturing client relationships. Skilled in contract 
+        negotiation, estimation and budgeting, scope management, and conducting insightful project evaluations. 
+        Strong leadership in cross-functional team management, process optimization, and implementing 
+        performance-driven strategies that align with organizational objectives. Well-versed in Abu Dhabi & Middle 
+        East business environment, regulations, and client engagement, ensuring compliance and market 
+        competitiveness.</p>
     </section>
 
     <section>
@@ -111,25 +215,29 @@
       <div class="skills-icons">
         <div><img src="https://img.icons8.com/ios-filled/50/000000/manager.png" alt="Management"/><p>Project Management</p></div>
         <div><img src="https://img.icons8.com/ios-filled/50/000000/accounting.png" alt="Finance"/><p>Financial Analysis</p></div>
-        <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnGNI1lz5VyjcPk5BfUEcLuutkZSlkKA23olirP_uDzcgeoGpXjcGPSSkCZEIR66b3jtY&usqp=CAU" alt="Planning"/><p>Strategic Planning</p></div>
+        <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnGNI1lz5VyjcPk5BfUEcLuutkZSlkKA23olirP_uDzcgeoGpXjcGPSSkCZEIR663jtG&usqp=CAU" alt="Planning"/><p>Strategic Planning</p></div>
         <div><img src="https://img.icons8.com/ios-filled/50/000000/agreement.png" alt="Negotiation"/><p>Contract Negotiation</p></div>
         <div><img src="https://img.icons8.com/ios-filled/50/000000/calculator.png" alt="Budgeting"/><p>Budgeting & Estimation</p></div>
         <div><img src="https://img.icons8.com/ios-filled/50/000000/teamwork.png" alt="Teamwork"/><p>Cross-functional Leadership</p></div>
+        <div><img src="https://img.icons8.com/ios-filled/50/000000/puzzle.png" alt="Problem Solving"/><p>Problem Solving</p></div>
+        <div><img src="https://img.icons8.com/ios-filled/50/000000/gears.png" alt="Process Optimization"/><p>Process Optimization</p></div>
+        <div><img src="https://img.icons8.com/ios-filled/50/000000/flexibility.png" alt="Adaptability"/><p>Adaptability</p></div>
+        <div><img src="https://img.icons8.com/ios-filled/50/000000/talk-male.png" alt="Effective Communication"/><p>Effective Communication</p></div>
+        <div><img src="https://img.icons8.com/ios-filled/50/000000/customer-insight.png" alt="Client Relationship"/><p>Client Relationship</p></div>
+        <div><img src="https://img.icons8.com/ios-filled/50/000000/line-chart.png" alt="Business Development"/><p>Business Development</p></div>
+        <div><img src="https://img.icons8.com/ios-filled/50/000000/leader.png" alt="Team Leadership"/><p>Team Leadership</p></div>
+        <div><img src="https://img.icons8.com/ios-filled/50/000000/risk-management.png" alt="Risk Management"/><p>Risk Management</p></div>
+        <div><img src="https://img.icons8.com/ios-filled/50/000000/sales-performance.png" alt="P&L Management"/><p>P&L Management</p></div>
+        <div><img src="https://img.icons8.com/ios-filled/50/000000/negotiation.png" alt="Negotiation"/><p>Negotiation</p></div>
       </div>
     </section>
 
     <section>
       <h2>Certifications</h2>
-      <div class="cert-icons">
-        <img src="https://img.icons8.com/color/48/000000/pmp.png" alt="PMP">
-        <img src="https://img.icons8.com/color/48/000000/negotiation.png" alt="Negotiation">
-        <img src="https://img.icons8.com/color/48/000000/six-sigma.png" alt="Six Sigma">
-        <img src="https://img.icons8.com/color/48/000000/scrum.png" alt="Scrum">
-      </div>
-      <p class="badge">PMP (Project Management Professional) - Active</p>
+      <p class="badge">PMP (Project Management Professional) - Oct 2008 - Active</p>
       <p class="badge">Scrum Fundamentals Certified (SFC)</p>
       <p class="badge">Six Sigma Yellow Belt</p>
-      <p class="badge">NGstudy Negotiation Associate</p>
+      <p class="badge">NGstudy Certified Negotiation Associate (NCN-A)</p>
     </section>
 
     <section>
@@ -138,45 +246,62 @@
         <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png" alt="Excel">
         <img src="https://img.icons8.com/color/48/000000/tableau-software.png" alt="Tableau">
         <img src="https://img.icons8.com/color/48/000000/sap.png" alt="SAP Ariba">
-        <img src="https://img.icons8.com/color/48/000000/erp.png" alt="ERP">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlbn163IVHehcElhpYYfr2vAlVts73slDLow&s" alt="ERP">
       </div>
       <p class="badge">MS Office</p>
       <p class="badge">MS Visio</p>
       <p class="badge">Photoshop</p>
       <p class="badge">MAXIMO CMMS</p>
+      <p class="badge">Jira</p>
     </section>
 
     <section>
       <h2>Experience</h2>
-      <h3>Projects Control Manager — Royal Gardens Agricultural Contracting LLC, Abu Dhabi (Dec 2006 – Present)</h3>
+      <h3>Projects Control Manager — Royal Gardens Agricultural Contracting LLC, Abu Dhabi <span class="experience-date">December 2006 - current</span></h3> 
+      <p>Responsibilities:</p>
       <ul>
-        <li>Handled project costing, budgeting, financial forecasting, and P&L operations.</li>
-        <li>Coordinated with clients and authorities (DMT, ADM, WRM, AAM, ADDC).</li>
-        <li>Supervised scope/time/cost, developed procedures, managed ERP/CMMS systems.</li>
-        <li>Oversaw contract negotiation, vendor management, and HSE quality standards.</li>
+        <li><strong>Costing & Estimation:</strong> Reviewed and analyzed tenders, managed technical and financial proposals, administered engineering and contract records, and supervised project budgets and estimation.</li>
+        <li><strong>Financial Management:</strong> Monitored project financials, revenues, costs and profitability. Implemented financial control to ensure projects stay on budget. Forecasted and managed cash flow for projects. Managed P&L operations, ensuring financial stability and business profitability for projects.</li>
+        <li><strong>Operations & Project Management:</strong> Involved in scope, time and cost control, reviewed designs and specifications for cost-effectiveness, developed and implemented management procedures for projects, and supervised cost estimating, financial analysis, and scheduling activities. Collaborate seamlessly with cross-functional teams to articulate precise project requirements and objectives.</li>
+        <li><strong>Coordination:</strong> Coordinated & communicated with stakeholders/clients (DMT, ADM, WRM, AAM, ADDC etc.) on technical requirements, and participated in change & risk management. Collaborate seamlessly with cross-functional teams to articulate precise project requirements and objectives. Cultivate robust client relationships, ensuring that their unique needs are not only met but consistently surpassed.</li>
+        <li><strong>Contract & Procurement Management:</strong> Negotiated and managed high-value contracts, securing profitable agreements with vendors, subcontractors, and government entities.</li>
+        <li><strong>Asset Management:</strong> Implemented ERP & CMMS solutions, enhancing asset management, financial tracking, and business operations.</li>
+        <li><strong>HSE & Quality Management:</strong> Ensured compliance with ISO 9001, ISO 14001, and ISO 45001 standards for quality, safety, and environmental management.</li>
       </ul>
 
-      <h3>Senior Engineer — House of Development for Agricultural Contracting WLL, Kuwait (Jan 2003 – Nov 2006)</h3>
+      <h3>Senior Engineer — House of Development for Agricultural Contracting WLL, Kuwait <span class="experience-date">January 2003 - November 2006</span></h3>
+      <p>Responsibilities:</p>
       <ul>
-        <li>Led landscape and irrigation project construction and asset management.</li>
-        <li>Surveyed and quantified various landscape assets and civil/mechanical structures.</li>
-        <li>Prepared CMMS databases, execution schedules, and maintenance reports.</li>
+        <li>Proficient in managing construction sites, executing works, and supervising manpower.</li>
+        <li>Skilled in surveying assets and quantifying grass areas, plants, hard landscapes, civil and mechanical structures, and preparing data structures for CMMS databases.</li>
+        <li>Experienced in identifying and categorizing different asset classes and providing detailed explanations.</li>
+        <li>Successfully developed asset management plans and construction arrangements for several landscape and irrigation projects, including Motorways Project, Garden District - 4 Project, Jaber Ali Air Base Project, Ali Al Salem Air Base projects, and various private contracts.</li>
+        <li>Competent in compiling and maintaining accurate asset inventory and performance data.</li>
+        <li>Knowledgeable in contract procedures and documents for new construction and maintenance works.</li>
+        <li>Capable of planning, designing, and executing irrigation, landscape, and electromechanical works.</li>
+        <li>Proficient in preparing schedules and periodic accomplishment reports for landscape, irrigation, and electromechanical works.</li>
+        <li>Skilled in estimating and requisitioning manpower, materials, and equipment for optimal use at sites.</li>
       </ul>
 
-      <h3>Planning & Asset Management Manager — Vimsons Aerosol, India (Jul 1998 – Dec 2002)</h3>
+      <h3>Planning & Asset Management Specialist/Manager — Vimsons Aerosol, India <span class="experience-date">July 1998 - December 2002</span></h3>
+      <p>Responsibilities:</p>
       <ul>
-        <li>Developed maintenance and operation plans, manpower and resource coordination.</li>
-        <li>Ensured protection and checkups of heavy equipment and site arrangement.</li>
+        <li>Prepare detailed method statements and operation plans for Asset Management reports.</li>
+        <li>Manage manpower, stores, and material handling.</li>
+        <li>Develop maintenance procedures for contractual operations including planning, scheduling, execution, commissioning, and reporting.</li>
+        <li>Ensure adequate protection and periodic check-ups of heavy equipment and assets to avoid critical problems.</li>
+        <li>Survey assets such as land, civil, mechanical, and other structures.</li>
+        <li>Coordinate site arrangements for water supply, electric supply, tools, and equipment.</li>
       </ul>
     </section>
 
     <section>
       <h2>Education</h2>
       <ul>
-        <li><strong>MBA</strong>, Manipal University, Jaipur (2022–2024) – First Class with Distinction</li>
-        <li><strong>B.E. Chemical</strong>, DDIT, Gujarat University (1998) – First Class with Distinction</li>
-        <li><strong>Post Graduate Program in Business Analysis</strong>, Purdue University (2020–2021)</li>
-        <li><strong>Diploma in Info & Systems Management</strong>, Aptech (1998)</li>
+        <li><strong>MBA</strong>, Manipal University, Jaipur <span class="experience-date">Oct 2022 - Dec 2024</span> – First Class with Distinction</li>
+        <li><strong>B.E. Chemical</strong>, DDIT, Gujarat University <span class="experience-date">May 1998</span> – First Class with Distinction</li>
+        <li><strong>Post Graduate Program in Business Analysis</strong>, Purdue University <span class="experience-date">Nov 2020 - May 2021</span></li>
+        <li><strong>Diploma in Info & Systems Management</strong>, Aptech <span class="experience-date">1998</span> – First Class</li>
       </ul>
     </section>
 
@@ -195,7 +320,7 @@
     <section>
       <h2>Accomplishments</h2>
       <ul>
-        <li>Board of Governance member, Bright Riders School, Abu Dhabi (Parent Representative)</li>
+        <li>Currently appointed as one of the Board of Governance for Bright Riders School, Abu Dhabi representing Parent body.</li>
       </ul>
     </section>
   </div>
