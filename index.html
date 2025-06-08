@@ -3,56 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mohammad Aasif Ikbal Kazi</title>
+  <title>Mohammad Aasif Ikbal Kazi - Resume</title>
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    :root {
+      --primary: #1e2a38;
+      --accent: #ffd369;
+      --bg: #f5f7fa;
+      --dark: #333;
+    }
+    * {
       margin: 0;
-      background: #f5f7fa;
-      color: #333;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--dark);
+      line-height: 1.6;
     }
     header {
-      background: #1e2a38;
+      background: var(--primary);
       color: white;
       padding: 2rem;
       text-align: center;
-      animation: fadeIn 2s ease-in-out;
     }
     header h1 {
-      margin: 0.3rem;
+      margin: 0.3rem 0;
     }
     header a {
-      color: #ffd369;
+      color: var(--accent);
       text-decoration: none;
     }
-    section {
-      padding: 2rem;
-      max-width: 1000px;
+    .container {
+      max-width: 1100px;
       margin: auto;
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+      animation: fadeInUp 0.8s ease-in-out both;
     }
     h2 {
+      margin-bottom: 1rem;
       border-bottom: 2px solid #ddd;
       padding-bottom: 0.5rem;
-      margin-top: 2rem;
     }
     ul {
-      list-style: disc;
       padding-left: 1.5rem;
     }
-    .fade-in {
-      animation: fadeInUp 1s ease forwards;
+    .badge {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 0.3rem 0.8rem;
+      margin: 0.2rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+    .cert-icons img, .tool-icons img {
+      width: 48px;
+      margin: 0.5rem;
+    }
+    .skills-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .skills-icons div {
+      text-align: center;
+      width: 100px;
+    }
+    .skills-icons img {
+      width: 48px;
+      margin-bottom: 0.3rem;
     }
     @keyframes fadeInUp {
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
     }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
     @media (max-width: 768px) {
-      section {
-        padding: 1rem;
+      .skills-icons {
+        justify-content: center;
       }
     }
   </style>
@@ -60,95 +92,120 @@
 <body>
   <header>
     <h1>Mohammad Aasif Ikbal Kazi</h1>
-    <p>Projects Control Manager | 25+ Years Experience in Landscaping & Contracting</p>
+    <p>Projects Control Manager | 25+ Years in Landscaping & Contracting</p>
     <p>
-      📍 Abu Dhabi, UAE | 📧 <a href="mailto:aasifkazi@yahoo.com">aasifkazi@yahoo.com</a> |
-      📞 +971501275464 | <a href="https://linkedin.com/in/aasifkazi" target="_blank">LinkedIn</a>
+      📍 704, Corniche Tower Block B, Al Bateen, PO Box 45414, Abu Dhabi – U.A.E. <br />
+      📧 <a href="mailto:aasifkazi@yahoo.com">aasifkazi@yahoo.com</a> | 📞 +971501275464 | 
+      <a href="https://linkedin.com/in/aasifkazi" target="_blank">LinkedIn</a>
     </p>
   </header>
 
-  <section class="fade-in">
-    <h2>Professional Summary</h2>
-    <p>Seasoned management professional with over 25 years of leadership experience in landscaping, construction, and contracting. Adept at strategic planning, project execution, risk mitigation, and cross-functional leadership. Proven ability to drive operational excellence and manage large teams and budgets.</p>
-  </section>
+  <div class="container">
+    <section>
+      <h2>Professional Summary</h2>
+      <p>Seasoned management professional with over 25 years of leadership experience in the landscaping, construction, and contracting industry. Specializes in project management, P&amp;L management, strategic planning, CAPEX and OPEX management, financial oversight, and operational excellence. Proven record in business growth, large-scale project execution, and workforce leadership (1600+ employees). Skilled in stakeholder coordination, scope and risk management, and cross-functional team collaboration. Strong understanding of Abu Dhabi &amp; Middle East business environment and regulations.</p>
+    </section>
 
-  <section class="fade-in">
-    <h2>Skills</h2>
-    <ul>
-      <li>Project Management</li>
-      <li>Process Optimization</li>
-      <li>P&L and Financial Oversight</li>
-      <li>Team Leadership & Risk Management</li>
-      <li>Client Relationship & Negotiation</li>
-      <li>Business Development & Strategic Planning</li>
-    </ul>
-  </section>
+    <section>
+      <h2>Skills</h2>
+      <div class="skills-icons">
+        <div><img src="https://img.icons8.com/ios-filled/50/000000/manager.png" alt="Management"/><p>Project Management</p></div>
+        <div><img src="https://img.icons8.com/ios-filled/50/000000/accounting.png" alt="Finance"/><p>Financial Analysis</p></div>
+        <div><img src="https://img.icons8.com/ios-filled/50/000000/planning.png" alt="Planning"/><p>Strategic Planning</p></div>
+        <div><img src="https://img.icons8.com/ios-filled/50/000000/agreement.png" alt="Negotiation"/><p>Contract Negotiation</p></div>
+        <div><img src="https://img.icons8.com/ios-filled/50/000000/calculator.png" alt="Budgeting"/><p>Budgeting & Estimation</p></div>
+        <div><img src="https://img.icons8.com/ios-filled/50/000000/teamwork.png" alt="Teamwork"/><p>Cross-functional Leadership</p></div>
+      </div>
+    </section>
 
-  <section class="fade-in">
-    <h2>Experience</h2>
-    <h3>Royal Gardens Agricultural Contracting LLC, Abu Dhabi (2006 – Present)</h3>
-    <p><em>Projects Control Manager</em></p>
-    <ul>
-      <li>Managed costing, estimation, financial control, cash flow, and P&L.</li>
-      <li>Led project planning, stakeholder coordination, scope control, and execution.</li>
-      <li>Negotiated contracts, optimized procurement, and implemented ERP/CMMS.</li>
-      <li>Ensured ISO compliance in quality, safety, and environment.</li>
-    </ul>
+    <section>
+      <h2>Certifications</h2>
+      <div class="cert-icons">
+        <img src="https://img.icons8.com/color/48/000000/pmp.png" alt="PMP">
+        <img src="https://img.icons8.com/color/48/000000/negotiation.png" alt="Negotiation">
+        <img src="https://img.icons8.com/color/48/000000/six-sigma.png" alt="Six Sigma">
+        <img src="https://img.icons8.com/color/48/000000/scrum.png" alt="Scrum">
+      </div>
+      <p class="badge">PMP (Project Management Professional) - Active</p>
+      <p class="badge">Scrum Fundamentals Certified (SFC)</p>
+      <p class="badge">Six Sigma Yellow Belt</p>
+      <p class="badge">NGstudy Negotiation Associate</p>
+    </section>
 
-    <h3>House of Development for Agricultural Contracting WLL, Kuwait (2003 – 2006)</h3>
-    <p><em>Senior Engineer</em></p>
-    <ul>
-      <li>Managed construction, CMMS data, and asset management for landscape/irrigation projects.</li>
-      <li>Planned and executed civil/mechanical work and created reporting schedules.</li>
-    </ul>
+    <section>
+      <h2>Tools & Software</h2>
+      <div class="tool-icons">
+        <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png" alt="Excel">
+        <img src="https://img.icons8.com/color/48/000000/tableau-software.png" alt="Tableau">
+        <img src="https://img.icons8.com/color/48/000000/sap.png" alt="SAP Ariba">
+        <img src="https://img.icons8.com/color/48/000000/erp.png" alt="ERP">
+      </div>
+      <p class="badge">MS Office</p>
+      <p class="badge">MS Visio</p>
+      <p class="badge">Photoshop</p>
+      <p class="badge">MAXIMO CMMS</p>
+    </section>
 
-    <h3>Vimsons Aerosol, India (1998 – 2002)</h3>
-    <p><em>Planning & Asset Management Manager</em></p>
-    <ul>
-      <li>Developed asset protection, maintenance procedures, and resource planning.</li>
-      <li>Handled operation plans and site coordination.</li>
-    </ul>
-  </section>
+    <section>
+      <h2>Experience</h2>
+      <h3>Projects Control Manager — Royal Gardens Agricultural Contracting LLC, Abu Dhabi (Dec 2006 – Present)</h3>
+      <ul>
+        <li>Handled project costing, budgeting, financial forecasting, and P&L operations.</li>
+        <li>Coordinated with clients and authorities (DMT, ADM, WRM, AAM, ADDC).</li>
+        <li>Supervised scope/time/cost, developed procedures, managed ERP/CMMS systems.</li>
+        <li>Oversaw contract negotiation, vendor management, and HSE quality standards.</li>
+      </ul>
 
-  <section class="fade-in">
-    <h2>Education & Certifications</h2>
-    <ul>
-      <li><strong>MBA</strong> (Oct 2022 – Dec 2024), Manipal University – Distinction</li>
-      <li><strong>B.E. Chemical</strong> (1998), DDIT, Gujarat University – Distinction</li>
-      <li><strong>PMP Certified</strong> – PMI, USA (Since 2008)</li>
-      <li>Business Analysis – Purdue University (2021)</li>
-      <li>Diploma in Info & Systems Management – Aptech</li>
-      <li>Scrum Fundamentals, Six Sigma Yellow Belt, NGstudy Negotiation</li>
-    </ul>
-  </section>
+      <h3>Senior Engineer — House of Development for Agricultural Contracting WLL, Kuwait (Jan 2003 – Nov 2006)</h3>
+      <ul>
+        <li>Led landscape and irrigation project construction and asset management.</li>
+        <li>Surveyed and quantified various landscape assets and civil/mechanical structures.</li>
+        <li>Prepared CMMS databases, execution schedules, and maintenance reports.</li>
+      </ul>
 
-  <section class="fade-in">
-    <h2>Trainings & Workshops</h2>
-    <ul>
-      <li>Internal Auditor – ISO 9001, 14001, 45001 (QRS)</li>
-      <li>Program Management – PROGStudy</li>
-      <li>LEED Green Associate – Green Education</li>
-      <li>Commercial Contracts Management – Chicago Training Center</li>
-      <li>Prince2 Training Program – Simplilearn</li>
-      <li>Supervisory Development Program – BOAT, India</li>
-    </ul>
-  </section>
+      <h3>Planning & Asset Management Manager — Vimsons Aerosol, India (Jul 1998 – Dec 2002)</h3>
+      <ul>
+        <li>Developed maintenance and operation plans, manpower and resource coordination.</li>
+        <li>Ensured protection and checkups of heavy equipment and site arrangement.</li>
+      </ul>
+    </section>
 
-  <section class="fade-in">
-    <h2>Software & Tools</h2>
-    <ul>
-      <li>Windows, MS Office, Visio, Photoshop</li>
-      <li>CMMS: MAXIMO, SAP Ariba</li>
-      <li>Analytics: Tableau, Jira, Excel</li>
-    </ul>
-  </section>
+    <section>
+      <h2>Education</h2>
+      <ul>
+        <li><strong>MBA</strong>, Manipal University, Jaipur (2022–2024) – First Class with Distinction</li>
+        <li><strong>B.E. Chemical</strong>, DDIT, Gujarat University (1998) – First Class with Distinction</li>
+        <li><strong>Post Graduate Program in Business Analysis</strong>, Purdue University (2020–2021)</li>
+        <li><strong>Diploma in Info & Systems Management</strong>, Aptech (1998)</li>
+      </ul>
+    </section>
 
-  <section class="fade-in">
-    <h2>Accomplishments</h2>
-    <ul>
-      <li>Board Member of Governance, Bright Riders School, Abu Dhabi (Parent Representative)</li>
-    </ul>
-  </section>
+    <section>
+      <h2>Trainings & Workshops</h2>
+      <ul>
+        <li>Supervisory Development Programme – BOAT, Bombay</li>
+        <li>LEED – Green Associate, Green Education Services (USA)</li>
+        <li>Commercial Contracts Management – Chicago Training Center, Abu Dhabi</li>
+        <li>Program Management Training – VMedu, PROGStudy.com</li>
+        <li>Prince2 Certification Training Program (2019) – Simplilearn</li>
+        <li>Internal Audit – ISO 9001:2015, ISO 14001:2015, ISO 45001:2018 – QRS, Abu Dhabi</li>
+      </ul>
+    </section>
 
+    <section>
+      <h2>Accomplishments</h2>
+      <ul>
+        <li>Board of Governance member, Bright Riders School, Abu Dhabi (Parent Representative)</li>
+      </ul>
+    </section>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('section').forEach((sec, i) => {
+        sec.style.animationDelay = `${i * 0.2}s`;
+      });
+    });
+  </script>
 </body>
 </html>
